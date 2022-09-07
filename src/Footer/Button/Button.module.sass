@@ -1,0 +1,31 @@
+.container
+    position: relative
+    margin: 0
+    background: #fece00
+    box-shadow: 1px 2px 2px #e59500
+    text-align: center
+    width: 130px
+    height: 40px
+    padding: 0
+    cursor: pointer
+    line-height: 44px
+    font-weight: bold
+    color: rgba(0, 0, 0, 0.65)
+    letter-spacing: 0.06em
+    vertical-align: top
+    display: inline-block
+    font-size: 15px
+    text-transform: uppercase
+    border: none
+    &:hover
+        background: #fcc205
+    &:active
+        box-shadow: 1px 2px 2px #fece00 inset
+
+.container.disabled
+    background: #e7ce80
+    box-shadow: 1px 2px 2px #f1ba52
+
+.container.hide
+    display: none
+

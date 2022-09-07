@@ -1,0 +1,129 @@
+.container
+    text-align: center
+
+
+.result_top_text
+    font-size: 24px
+    font-weight: bold
+    margin-bottom: 10px
+    text-align: center
+
+.result_top_number
+    font-size: 32px
+    margin: 0
+
+.line
+    width: 80%
+    margin: 20px auto 0
+    height: 1px
+    background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 45%,rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%)
+    
+.result_bottom_text
+    font-size: 24px
+    font-weight: bold
+    margin-bottom: 10px
+    
+.result_bottom_box
+    display: flex
+    justify-content: flex-start
+    
+.result_bottom_number
+    font-weight: bold
+    text-align: center
+    width: 60px
+    height: 60px
+    line-height: 60px
+    font-size: 22px
+    margin: 15px
+    background: url(../../images/shar.png) center top no-repeat
+    background-size: cover
+    
+.number_1
+    transform: rotateZ(-15deg)
+
+.number_1.anim
+    animation: show 2s ease-out forwards
+
+.number_2
+    opacity: 0
+    transform: rotateZ(5deg)
+
+.number_2.anim
+    animation: show 2s 800ms ease-out forwards
+
+.number_3
+    opacity: 0
+    transform: rotateZ(20deg)
+
+.number_3.anim
+    animation: show 2s 1600ms ease-out forwards
+
+.number_4
+    opacity: 0
+    transform: rotateZ(-5deg)
+
+.number_4.anim
+    animation: show 2s 2400ms ease-out forwards
+
+.number_5
+    opacity: 0
+    transform: rotateZ(15deg)
+
+.number_5.anim
+    animation: show 2s 3200ms ease-out forwards
+
+.number_6
+    opacity: 0
+
+.number_6.anim
+    animation: show 2s 4000ms ease-out forwards
+
+    
+.present
+    width: 45%
+    opacity: 0
+
+.present.anim
+    animation: show 1s 4800ms ease-out forwards
+
+
+@keyframes show
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@media screen and (max-width: 670px)
+    .result_top_number
+        font-size: 28px
+
+    .result_bottom_number
+        width: 45px
+        height: 45px
+        line-height: 45px
+        font-size: 16px
+        margin: 10px
+
+@media screen and (max-width: 480px)
+    .result_top_text
+        font-size: 20px
+        margin-bottom: 10px
+
+    .result_top_number
+        font-size: 22px
+
+    .result_bottom_text
+        font-size: 20px
+        margin-bottom: 10px
+
+    .result_bottom_number
+        width: 35px
+        height: 35px
+        line-height: 35px
+        font-size: 14px
+        margin: 7px
+
+@media screen and (max-width: 340px)
+    .result_bottom_number
+        margin: 5px
+        

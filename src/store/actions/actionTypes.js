@@ -1,8 +1,0 @@
-export const ON_FIELD_SELECTION = 'ON_FIELD_SELECTION'
-export const RESET_SELECTION = 'RESET_SELECTION'
-export const IS_CHECKED_TRUE = 'IS_CHECKED_TRUE'
-export const SET_RESULT = 'SET_RESULT'
-export const SET_VICTORY = 'SET_VICTORY'
-export const IS_CHAMP_TRUE = 'IS_CHAMP_TRUE'
-export const ON_RESET = 'ON_RESET'
-export const CHAMPIONS = 'CHAMPIONS'
