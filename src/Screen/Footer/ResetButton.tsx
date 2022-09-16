@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { useAppDispatch } from '../redux/hooks'
-import { reset } from '../redux/lotto'
+import { useAppDispatch } from '../../redux/hooks'
+import { reset } from '../../redux/lotto'
 
 import Button from './Button'
 

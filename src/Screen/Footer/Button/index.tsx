@@ -1,8 +1,8 @@
 import React from 'react'
 import cn from 'classnames'
 
-import { useAppSelector } from '../../redux/hooks'
-import { getChecked } from '../../redux/lotto'
+import { useAppSelector } from '../../../redux/hooks'
+import { getChecked } from '../../../redux/lotto'
 
 import classes from './Button.module.sass'
 

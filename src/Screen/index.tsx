@@ -3,7 +3,7 @@ import React from 'react'
 import { useAppSelector } from '../redux/hooks'
 import { getChecked } from '../redux/lotto'
 
-import Footer from '../Footer'
+import Footer from './Footer'
 import ResultScreen from './ResultScreen'
 import GameScreen from './GameScreen'
 

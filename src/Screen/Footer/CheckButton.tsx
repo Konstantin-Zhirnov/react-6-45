@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { useAppDispatch, useAppSelector } from '../redux/hooks'
-import { setVictory, getSelected } from '../redux/lotto'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { setVictory, getSelected } from '../../redux/lotto'
 
 import Button from './Button'
 
