@@ -11,6 +11,7 @@ import classes from './Screen.module.sass'
 
 const Screen: React.FC = React.memo(() => {
   const isChecked = useAppSelector(getChecked)
+
   return (
     <div className={classes.container}>
       {!isChecked ? <GameScreen /> : <ResultScreen />}

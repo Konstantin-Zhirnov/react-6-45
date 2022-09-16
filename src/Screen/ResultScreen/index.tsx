@@ -2,7 +2,9 @@ import React from 'react'
 import cn from 'classnames'
 
 import { useAppSelector } from '../../redux/hooks'
-import { getChampion, getSelected, getVictory } from '../../redux/lotto'
+import { getSelected, getVictory } from '../../redux/lotto'
+
+import Ball from './Ball'
 
 import noMoney from '../../images/noMoney.png'
 import money from '../../images/money.png'
@@ -10,9 +12,23 @@ import money from '../../images/money.png'
 import classes from './ResultScreen.module.sass'
 
 const ResultScreen: React.FC = React.memo(() => {
-  const isChampion = useAppSelector(getChampion)
+  const [isChampion, setChampion] = React.useState(false)
+
   const selected = useAppSelector(getSelected)
   const victory = useAppSelector(getVictory)
+
+  React.useEffect(() => {
+    const result = [...selected]
+    const victoryArray = [...victory]
+    const r = result.sort().join('')
+    const v = victoryArray.sort().join('')
+
+    setChampion(r === v)
+
+    return () => {
+      setChampion(false)
+    }
+  }, [])
 
   return (
     <div className={classes.container}>
@@ -29,16 +45,7 @@ const ResultScreen: React.FC = React.memo(() => {
           <p className={classes.result_bottom_text}>Dropped out:</p>
           <div className={classes.result_bottom_box}>
             {victory.map((item, index) => (
-              <div
-                key={index}
-                className={cn(
-                  classes.result_bottom_number,
-                  classes[`number_` + (index + 1)],
-                  classes.anim,
-                )}
-              >
-                {item}
-              </div>
+              <Ball key={index} index={index} item={item} />
             ))}
           </div>
         </div>
